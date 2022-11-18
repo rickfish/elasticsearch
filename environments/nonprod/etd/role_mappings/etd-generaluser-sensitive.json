@@ -1,0 +1,25 @@
+{
+    "enabled": true,
+    "roles": [
+        "etd-generaluser-sensitive"
+    ],
+    "rules": {
+        "all": [{
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-stage-etd-generaluser,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements – Sensitive Code - Stage,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

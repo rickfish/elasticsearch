@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "roles": [
+        "sts-business-user",
+        "reporting_user"
+    ],
+    "rules": {
+        "all": [
+            {
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-prod-sts-business-user,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

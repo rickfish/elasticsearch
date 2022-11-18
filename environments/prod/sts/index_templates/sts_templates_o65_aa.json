@@ -1,0 +1,968 @@
+{
+  "index_patterns": ["sts_o65_aa*"],
+  "settings": {
+    "number_of_shards": 1,
+    "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 20
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "autocomplete_filter"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "FB_UID": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "MBINumber": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "MBRPCPEffDt": {
+        "type": "date"
+      },
+      "MBRPCPEprnDt": {
+        "type": "date"
+      },
+      "PCPFirstNM": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "PCPLastNM": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "PCPMiddleNM": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "accntBal": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "activeMemberCount": {
+        "type": "long"
+      },
+      "addressLine1": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "addressLine2": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agencyAOR": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agencyPhoneNbrs": {
+        "properties": {
+          "phoneNbr": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "phoneType": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "agentAOR": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentCipId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentFirstNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentFullNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentLastNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentMdlNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentPhoneNbrs": {
+        "properties": {
+          "phoneNbr": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "phoneType": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "agentSfx": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "agentStatus": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "aorContractAlignmentEffDt": {
+        "type": "date"
+      },
+      "aorContractAlignmentEprnDt": {
+        "type": "date"
+      },
+      "applicantCipId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "areaMngr": {
+        "properties": {
+          "EmilAddrTx": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "empleStatCd": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "emplmtTypCd": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "fstNm": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "lstNm": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "racfId": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "cancelReasonCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "channel": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "cityNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "cmsCertStatus": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "cntyNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "contractEffDt": {
+        "type": "date"
+      },
+      "contractEprnDt": {
+        "type": "date"
+      },
+      "contractStatus": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "county": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "countyCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "countyNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "delinquencyInd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "dlnqtDays": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "emailAddress": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "entity": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "exchangeInd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "fipsCountyCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "genAreaMngr": {
+        "properties": {
+          "emilAddrTx": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "empleStatCd": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "emplmtTypCd": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "fstNm": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "lstNm": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "racfId": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "geoLocation": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "grpDiv": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "hccId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "icid": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "insertDtTm": {
+        "type": "date"
+      },
+      "insertId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "latitude": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "lob": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "longitude": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "lzsAgentCipID": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "lzsMemberCipId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "masterAgencyAOR": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "masterAgencyNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "masterAgencyPhoneNbrs": {
+        "properties": {
+          "phoneNbr": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "phoneType": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "memeberCipId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "metalLevel": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "originalEffDt": {
+        "type": "date"
+      },
+      "paidThruDate": {
+        "type": "date"
+      },
+      "planDfnnId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "planNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "planNumber": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "policyAorAudLastUpdtTm": {
+        "type": "date"
+      },
+      "policyCtcAudLastUpdDtTm": {
+        "type": "date"
+      },
+      "policyPlanAudLastUpdDtTm": {
+        "type": "date"
+      },
+      "postalCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "product": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "productCategoryTypeCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "productId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "productName": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "productType": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "rgn": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "rgnCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "rgnNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "salesAgentTrtryNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "securityRole": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "segment": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "sourceSystemCd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "stateNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "subscriberDob": {
+        "type": "date"
+      },
+      "subscriberFirstNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "subscriberInsPolicyId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "subscriberLastNm": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "telephoneNum": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "tenantId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "zCodeInd": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  }
+}

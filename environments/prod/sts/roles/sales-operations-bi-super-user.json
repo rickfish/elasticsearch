@@ -1,0 +1,51 @@
+{
+  "cluster": [
+    "monitor"
+  ],
+  "indices": [
+    {
+      "names": [
+        "sts_*"
+      ],
+      "privileges": [
+        "manage",
+        "create_index",
+        "create",
+        "delete",
+        "delete_index",
+        "index",
+        "read",
+        "view_index_metadata"
+      ],
+      "allow_restricted_indices": false
+    }
+  ],
+  "applications": [
+    {
+      "application": "kibana-.kibana",
+      "privileges": [
+        "space_all"
+      ],
+      "resources": [
+        "space:sra"
+      ]
+    },
+    {
+      "application": "kibana-.kibana",
+      "privileges": [
+        "feature_discover.read",
+        "feature_visualize.read",
+        "feature_dashboard.read",
+        "feature_canvas.read"
+      ],
+      "resources": [
+        "space:sa"
+      ]
+    }
+  ],
+  "run_as": [],
+  "metadata": {},
+  "transient_metadata": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "script": {
+        "lang": "mustache",
+        "source": {
+            "size": 100,
+            "_source": [
+                "_id"
+            ],
+            "query": {
+                "bool": {
+                    "filter": [
+                        {
+                            "term": {
+                                "seqClaimId": "{{seq_claim_id}}"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

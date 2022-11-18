@@ -1,0 +1,20 @@
+- name: Get a random password
+  command: >
+    openssl rand -base64 14
+  register: password
+  when: item.password is not defined
+
+- set_fact:
+    password: "{{ item.password | default(password.stdout) }}"
+
+- debug:
+    msg: "{{item}}"
+
+- name: Email credentials
+  mail:
+    from: "elasticsearch@bcbsfl.com"
+    subject: Elasticsearch Kibana Credentials
+    to: "{{item.email}}"
+    body: "Your credentials for {{KIBANA_VIP_URL}}\n\rUsername: {{item.username}}\n\rPassword:{{password}}\n\r"
+  delegate_to: localhost
+  when: item.email is defined

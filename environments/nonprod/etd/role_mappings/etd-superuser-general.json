@@ -1,0 +1,25 @@
+{
+    "enabled": true,
+    "roles": [
+        "etd-superuser-general"
+    ],
+    "rules": {
+        "all": [{
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-stage-etd-superuser,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements - General - Stage,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

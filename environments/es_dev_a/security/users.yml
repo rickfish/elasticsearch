@@ -1,0 +1,4 @@
+native_realm_users:
+- username: d4zj
+  email: sean.mayhew@bcbsfl.com
+  roles: ["kibana_admin"]

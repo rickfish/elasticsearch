@@ -1,0 +1,25 @@
+{
+    "enabled": true,
+    "roles": [
+        "etd-admin-stategroup"
+    ],
+    "rules": {
+        "all": [{
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-prod-etd-admin,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements - State Group - Prod,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

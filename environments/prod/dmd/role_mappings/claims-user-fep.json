@@ -1,0 +1,27 @@
+{
+    "enabled": true,
+    "roles": [
+        "claims-user-fep",
+        "reporting_user"
+    ],
+    "rules": {
+        "all": [
+            {
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-prod-claims-user,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements - FEP - Prod,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

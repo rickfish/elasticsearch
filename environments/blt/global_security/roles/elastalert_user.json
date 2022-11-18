@@ -1,0 +1,16 @@
+{
+  "cluster": ["monitor"],
+  "indices": [
+    {
+      "names": ["elastalert_status*", "*"],
+      "privileges": ["all"],
+      "allow_restricted_indices": false
+    }
+  ],
+  "applications": [],
+  "run_as": [],
+  "metadata": {},
+  "transient_metadata": {
+    "enabled": true
+  }
+}

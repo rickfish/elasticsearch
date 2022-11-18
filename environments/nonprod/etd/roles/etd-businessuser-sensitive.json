@@ -1,0 +1,36 @@
+{
+    "cluster": [
+        "monitor"
+    ],
+    "indices": [{
+        "names": [
+            "conductor_*_sen*"
+        ],
+        "privileges": [
+            "all"
+        ],
+        "field_security": {
+            "grant": [
+                "*"
+            ],
+            "except": []
+        },
+        "allow_restricted_indices": false
+    }],
+    "applications": [{
+        "application": "kibana-.kibana",
+        "privileges": [
+            "space_all"
+        ],
+        "resources": [
+            "space:netflix-default-view",
+            "space:demo_etd_roles",
+            "space:netflix-super-user-view"
+        ]
+    }],
+    "run_as": [],
+    "metadata": {},
+    "transient_metadata": {
+        "enabled": true
+    }
+}

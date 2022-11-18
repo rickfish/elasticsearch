@@ -1,0 +1,194 @@
+{
+	"index_patterns": ["sts_core_tracking_records*"],
+    "settings": {
+        "number_of_shards": 1, 
+        "analysis": {
+            "filter": {
+                "autocomplete_filter": { 
+                    "type":     "edge_ngram",
+                    "min_gram": 2,
+                    "max_gram": 20
+                }
+            },
+            "analyzer": {
+                "autocomplete": {
+                    "type":      "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "autocomplete_filter" 
+                    ]
+                }
+            }
+        }
+    },
+    "mappings" : {
+      "properties" : {
+        "age" : {
+          "type" : "long"
+        },
+        "agencyType" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "aorCd" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "assignedTo" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "indvChnlPtnrId" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "insertDtTm" : {
+          "type" : "date"
+        },
+        "recordNm" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "reqstrEmail" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "reqstrName" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "salesAgencyId" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "securityRole" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "srNb" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "stat" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "subStat" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "subType" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "taxIdOrSsn" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "trCreatedDt" : {
+          "type" : "date"
+        },
+        "trEndDt" : {
+          "type" : "date"
+        },
+        "trNb" : {
+          "type" : "long"
+        },
+        "workType" : {
+          "type" : "text",
+			"analyzer": "autocomplete",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    }
+}

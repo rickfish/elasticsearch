@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "roles": [
+        "etd-admin-bluecard"
+    ],
+    "rules": {
+        "all": [{
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-prod-etd-admin,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements - BlueCard - Prod,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                    
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

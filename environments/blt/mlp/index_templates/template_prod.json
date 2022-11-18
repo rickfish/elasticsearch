@@ -1,0 +1,11 @@
+{
+  "order": 0,
+  "index_patterns": [
+    "mlp_prod*"
+  ],
+  "settings": {},
+  "mappings": {},
+  "aliases": {
+    "mlp_nonprod": {}
+  }
+}

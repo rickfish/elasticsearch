@@ -1,0 +1,25 @@
+{
+    "enabled": true,
+    "roles": [
+        "etd-superuser-sensitive"
+    ],
+    "rules": {
+        "all": [{
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-prod-etd-superuser,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements – Sensitive Code - Prod,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

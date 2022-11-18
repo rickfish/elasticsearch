@@ -1,0 +1,13 @@
+CODEOWNERS @d4zj
+README.md @d4zj
+environments/blt/**/* @d4zj @k1sj @a7mi @j2k6
+environments/nonprod/dmd/index_templates/* @d4zj @k1sj @a7mi @j2k6
+environments/nonprod/dmd/role_mappings/* @d4zj @g7z5 @k1sj @a7mi @j2k6
+environments/nonprod/dmd/roles/* @d4zj @g7z5 @k1sj @a7mi @j2k6
+
+environments/nonprod/etd/index_templates/* @d4zj @k1sj @a7mi @j2k6 @j7vd
+environments/nonprod/etd/role_mappings/* @d4zj @g7z5 @k1sj @a7mi @j2k6 @j7vd
+environments/nonprod/etd/roles/* @d4zj @g7z5 @k1sj @a7mi @j2k6 @j7vd
+
+environments/prod/**/role_mappings/* @d4zj @g7z5 @k1sj @a7mi @j2k6
+environments/prod/**/roles/* @d4zj @g7z5 @k1sj @a7mi @j2k6

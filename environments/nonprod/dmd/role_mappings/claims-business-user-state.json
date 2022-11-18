@@ -1,0 +1,27 @@
+{
+    "enabled": true,
+    "roles": [
+        "claims-business-user-state",
+        "reporting_user"
+    ],
+    "rules": {
+        "all": [
+            {
+                "field": {
+                    "realm.name": "esbluesaml"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=ssoportal-kibana-stage-claims-business-user,OU=PMI,OU=Applications,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            },
+            {
+                "field": {
+                    "groups": "CN=Data Services Entitlements - State Group - Stage,OU=Requested,OU=Groups,DC=bcbsfl,DC=com"
+                }
+            }
+        ]
+    },
+    "metadata": {}
+}

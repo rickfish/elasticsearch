@@ -1,0 +1,17 @@
+- name: Create ILM, Roles, Spaces, Templates
+  hosts: [es_api]
+  gather_facts: false
+  vars:
+    es_base_url: "https://{{ inventory_hostname }}.bcbsfl.com:9200"
+    api_username: "{{API_CREDENTIALS_USR}}"
+    api_password: "{{API_CREDENTIALS_PSW}}"
+  tasks:
+    - name: Include the User Vars
+      include_vars:
+        file: "{{playbook_dir}}/environments/{{env}}/security/users.yml"
+        name: users
+
+    - name: Create with files
+      include_tasks: es-create-users-tasks.yml
+      loop: "{{users.native_realm_users}}"
+      

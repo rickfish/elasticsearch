@@ -1,0 +1,739 @@
+{
+    "order": 0,
+    "index_patterns": [
+        "dmd_claims_detail*"
+    ],
+    "settings": {
+        "index": {
+            "number_of_shards": "1",
+            "number_of_replicas": "1"
+        }
+    },
+    "mappings": {
+        "properties": {
+            "totalInterestAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "tpVendorId": {
+                "type": "keyword"
+            },
+            "procedureCode": {
+                "type": "keyword"
+            },
+            "secRole": {
+                "type": "keyword"
+            },
+            "groupDelinqPostDate": {
+                "type": "date"
+            },
+            "benefitPackage": {
+                "type": "keyword"
+            },
+            "tpTransType": {
+                "type": "keyword"
+            },
+            "totalDeductible": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "adjustBatchNumber": {
+                "type": "keyword"
+            },
+            "orgClaimNbrFin": {
+                "type": "keyword"
+            },
+            "adjustInsertUser": {
+                "type": "keyword"
+            },
+            "adjustInsertProcess": {
+                "type": "keyword"
+            },
+            "cycleTimeReceiptToInsert": {
+                "type": "short"
+            },
+            "adjustCount": {
+                "type": "short"
+            },
+            "otherInsuranceInd": {
+                "type": "keyword"
+            },
+            "patControlNo": {
+                "type": "keyword"
+            },
+            "detailMarkCodesA": {
+                "type": "keyword"
+            },
+            "patientRespAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "allHoldsA": {
+                "type": "keyword"
+            },
+            "medicareReportNum": {
+                "type": "keyword"
+            },
+            "diagCodePointer2": {
+                "type": "keyword"
+            },
+            "diagCodePointer3": {
+                "type": "keyword"
+            },
+            "diagCodePointer4": {
+                "type": "keyword"
+            },
+            "placeOfServiceHeader": {
+                "type": "keyword"
+            },
+            "adjustComments": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "finalInterestDays": {
+                "type": "short"
+            },
+            "serviceEndDate": {
+                "type": "date"
+            },
+            "lineCount": {
+                "type": "short"
+            },
+            "correctedClaimInd": {
+                "type": "keyword"
+            },
+            "copayment1Amt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "providerParStatus": {
+                "type": "keyword"
+            },
+            "memberCity": {
+                "type": "keyword"
+            },
+            "newSeqClaimId": {
+                "type": "long"
+            },
+            "allAdjustmentReasonsA": {
+                "type": "keyword"
+            },
+            "allAdjudicationMethodA": {
+                "type": "keyword"
+            },
+            "adjustAllSeqClaimIds": {
+                "type": "keyword"
+            },
+            "adjustedInd": {
+                "type": "keyword"
+            },
+            "adjustPrevReason": {
+                "type": "keyword"
+            },
+            "allowedReason": {
+                "type": "keyword"
+            },
+            "providerNPI": {
+                "type": "keyword"
+            },
+            "procedureDatesA": {
+                "type": "date"
+            },
+            "allHoldsCount": {
+                "type": "short"
+            },
+            "submittedRendingNPI": {
+                "type": "keyword"
+            },
+            "billedModifier": {
+                "type": "keyword"
+            },
+            "dirtyClaimHold": {
+                "type": "keyword"
+            },
+            "transactionId": {
+                "type": "keyword"
+            },
+            "tags": {
+                "properties": {
+                    "secRole": {
+                        "type": "text",
+                        "fields": {
+                            "keyword": {
+                                "ignore_above": 256,
+                                "type": "keyword"
+                            }
+                        }
+                    }
+                }
+            },
+            "inquiryDate": {
+                "type": "date"
+            },
+            "processingStatus": {
+                "type": "keyword"
+            },
+            "groupName": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "claimStatusCOB": {
+                "type": "keyword"
+            },
+            "adjustmentReason": {
+                "type": "keyword"
+            },
+            "directEntryInd": {
+                "type": "keyword"
+            },
+            "notCoveredAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "adjudicationMethod": {
+                "type": "keyword"
+            },
+            "lineNumber": {
+                "type": "short"
+            },
+            "indexrolloverterm": {
+                "type": "keyword"
+            },
+            "headerHoldCodesA": {
+                "type": "keyword"
+            },
+            "seqVenId": {
+                "type": "long"
+            },
+            "detailHoldCodesA": {
+                "type": "keyword"
+            },
+            "gender": {
+                "type": "keyword"
+            },
+            "placeOfServiceDetailDesc": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "businessSegment": {
+                "type": "keyword"
+            },
+            "memberName": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "subLineCode": {
+                "type": "keyword"
+            },
+            "diagCodePointer": {
+                "type": "keyword"
+            },
+            "otherCarrierAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "overAllClaimStatus": {
+                "type": "keyword"
+            },
+            "updateUserDetail": {
+                "type": "keyword"
+            },
+            "allowedAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "vendorTaxId": {
+                "type": "keyword"
+            },
+            "dateReceived": {
+                "type": "date"
+            },
+            "allDenialReasonsA": {
+                "type": "keyword"
+            },
+            "memDelinqEffDate": {
+                "type": "date"
+            },
+            "revenueCode": {
+                "type": "keyword"
+            },
+            "medDefCode": {
+                "type": "keyword"
+            },
+            "vendorlastName": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "providerSpeciality": {
+                "type": "keyword"
+            },
+            "insertProcess": {
+                "type": "keyword"
+            },
+            "providerMhsCounty": {
+                "type": "keyword"
+            },
+            "providerSpecialityDesc": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "ocAllowedAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "updateUser": {
+                "type": "keyword"
+            },
+            "placeOfServiceHeaderDesc": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "dateOfBirth": {
+                "type": "date"
+            },
+            "headerMarkCodesA": {
+                "type": "keyword"
+            },
+            "checkDate": {
+                "type": "date"
+            },
+            "groupNumber": {
+                "type": "keyword"
+            },
+            "totalCobAdjAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "cycleTimePostDate": {
+                "type": "short"
+            },
+            "insertDatetimeDetail": {
+                "type": "date"
+            },
+            "seqClaimId": {
+                "type": "long"
+            },
+            "totalOcPaid": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "@timestamp": {
+                "type": "date"
+            },
+            "providerShortName": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "appTags": {
+                "properties": {
+                    "indexRollOverValue": {
+                        "type": "keyword"
+                    },
+                    "index": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "frequencyType": {
+                "type": "keyword"
+            },
+            "isCapitated": {
+                "type": "keyword"
+            },
+            "providerTypeId": {
+                "type": "keyword"
+            },
+            "auditStatus": {
+                "type": "keyword"
+            },
+            "postDate": {
+                "type": "date"
+            },
+            "totalCoins": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "authNumber": {
+                "type": "keyword"
+            },
+            "penaltyAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "updateDatetimeDetail": {
+                "type": "date"
+            },
+            "arPostDate": {
+                "type": "date"
+            },
+            "lineOfBusiness": {
+                "type": "keyword"
+            },
+            "prevSeqClaimId": {
+                "type": "long"
+            },
+            "copayment2Amt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "memberCountyName": {
+                "type": "keyword"
+            },
+            "totalAllowedAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "brrIndicator": {
+                "type": "keyword"
+            },
+            "totalNetAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "totalBilledAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "checkEftNumber": {
+                "type": "keyword"
+            },
+            "deductibleAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "groupDelinqInd": {
+                "type": "keyword"
+            },
+            "totalNotCovered": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "notCoveredReason": {
+                "type": "keyword"
+            },
+            "romeRuleId": {
+                "type": "keyword"
+            },
+            "mpdIndicator": {
+                "type": "keyword"
+            },
+            "claimType": {
+                "type": "keyword"
+            },
+            "netAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "providerTaxonomy": {
+                "type": "keyword"
+            },
+            "insertDatetime": {
+                "type": "date"
+            },
+            "memDelinqPostDate": {
+                "type": "date"
+            },
+            "medicaidInd": {
+                "type": "keyword"
+            },
+            "placeOfServiceDetail": {
+                "type": "keyword"
+            },
+            "faultInd": {
+                "type": "keyword"
+            },
+            "memberDelinqInd": {
+                "type": "keyword"
+            },
+            "itsDFInd": {
+                "type": "keyword"
+            },
+            "interestAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "senderCode": {
+                "type": "keyword"
+            },
+            "isHeaderLine": {
+                "type": "keyword"
+            },
+            "providerCountyName": {
+                "type": "keyword"
+            },
+            "contestedDate": {
+                "type": "date"
+            },
+            "headerUpdatedDate": {
+                "type": "date"
+            },
+            "insertUser": {
+                "type": "keyword"
+            },
+            "sensitiveInd": {
+                "type": "keyword"
+            },
+            "claimInd": {
+                "type": "keyword"
+            },
+            "ndcQuantity": {
+                "type": "keyword"
+            },
+            "groupDelinqEffDate": {
+                "type": "date"
+            },
+            "billedAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "patientStatusDesc": {
+                "type": "keyword"
+            },
+            "providerState": {
+                "type": "keyword"
+            },
+            "claimStatus": {
+                "type": "keyword"
+            },
+            "notCoveredQuantity": {
+                "type": "keyword"
+            },
+            "headerSourceOfPay": {
+                "type": "keyword"
+            },
+            "memberZipCode": {
+                "type": "keyword"
+            },
+            "totalCopay": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "patRsnVisitCodesA": {
+                "type": "keyword"
+            },
+            "totalPenalty": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "memberState": {
+                "type": "keyword"
+            },
+            "finalizedDate": {
+                "type": "date"
+            },
+            "itsProviderName": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "adjudDate": {
+                "type": "date"
+            },
+            "processingStatusHeader": {
+                "type": "keyword"
+            },
+            "ocPaidAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "businessSegmentM": {
+                "type": "keyword"
+            },
+            "billedProcedure": {
+                "type": "keyword"
+            },
+            "cycleTimeCheckDate": {
+                "type": "short"
+            },
+            "diagnosisA": {
+                "type": "keyword"
+            },
+            "placeOfService": {
+                "type": "keyword"
+            },
+            "erisaIndicator": {
+                "type": "keyword"
+            },
+            "itsTypeIndicator": {
+                "type": "keyword"
+            },
+            "appTimestamp": {
+                "type": "date"
+            },
+            "headerUpdatedUser": {
+                "type": "keyword"
+            },
+            "nsaIndicator": {
+                "type": "keyword"
+            },
+            "providerId": {
+                "type": "keyword"
+            },
+            "detailUnitLine": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "@version": {
+                "type": "keyword"
+            },
+            "totalOcAllowed": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "provTypeOrspecialty": {
+                "type": "keyword"
+            },
+            "claimNumber": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "eventTimestamp": {
+                "type": "date"
+            },
+            "ndcCode": {
+                "type": "keyword"
+            },
+            "memberMhsCounty": {
+                "type": "keyword"
+            },
+            "poaDxA": {
+                "type": "keyword"
+            },
+            "heldUser": {
+                "type": "keyword"
+            },
+            "billType": {
+                "type": "keyword"
+            },
+            "paySubscriber": {
+                "type": "keyword"
+            },
+            "mcgerRuleId": {
+                "type": "keyword"
+            },
+            "submittedBillingNPI": {
+                "type": "keyword"
+            },
+            "hccId": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "bbInd": {
+                "type": "keyword"
+            },
+            "graceDaysType": {
+                "type": "keyword"
+            },
+            "planCode": {
+                "type": "keyword"
+            },
+            "providerTypeDescription": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "serviceStartDate": {
+                "type": "date"
+            },
+            "claimDate": {
+                "type": "date"
+            },
+            "asoIndicator": {
+                "type": "keyword"
+            },
+            "totalPatientRespAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "documentId": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            },
+            "patientStatus": {
+                "type": "keyword"
+            },
+            "withholdAmt": {
+                "scaling_factor": 100,
+                "type": "scaled_float"
+            },
+            "procShortDesc": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "ignore_above": 256,
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    },
+    "aliases": {}
+}

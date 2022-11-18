@@ -1,0 +1,18 @@
+{
+  "cluster" : [
+    "manage_security",
+    "manage_ilm",
+    "manage_index_templates",
+    "create_snapshot",
+    "manage_slm",
+    "manage_watcher",
+    "manage_ml"
+  ],
+  "indices" : [ ],
+  "applications" : [ ],
+  "run_as" : [ ],
+  "metadata" : { },
+  "transient_metadata" : {
+    "enabled" : true
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "index_patterns": [
+        "dmd_claims_detail*-sao-2020",
+        "dmd_claims_detail*-sao-2019",
+        "dmd_claims_detail*-sao-2018"
+    ],
+    "order": 1,
+    "settings": {
+        "index": {
+            "number_of_shards": 2,
+            "number_of_replicas": 1
+        }
+    }
+}
